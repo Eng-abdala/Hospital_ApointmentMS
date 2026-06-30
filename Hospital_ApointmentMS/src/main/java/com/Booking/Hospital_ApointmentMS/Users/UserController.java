@@ -15,8 +15,8 @@ public class UserController {
 
 
     @PostMapping
-    public User Saveuser(@RequestBody User user){
-       return service.SaveUser(user);
+    public void Saveuser(@RequestBody User user){
+        service.SaveUser(user);
     }
     @GetMapping
     public List<User> getusers(){

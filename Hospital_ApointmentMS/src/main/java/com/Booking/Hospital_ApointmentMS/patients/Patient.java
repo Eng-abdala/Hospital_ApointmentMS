@@ -1,5 +1,6 @@
 package com.Booking.Hospital_ApointmentMS.Patients;
 
+import com.Booking.Hospital_ApointmentMS.Users.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,8 +19,9 @@ public class Patient {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "user_id", unique = true, nullable = false)
-    private Long userId;
+    @OneToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @Column(name = "full_name", nullable = false)
     private String fullName;

@@ -1,4 +1,4 @@
-package com.Booking.Hospital_ApointmentMS.Patients;
+package com.Booking.Hospital_ApointmentMS.patients;
 
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;

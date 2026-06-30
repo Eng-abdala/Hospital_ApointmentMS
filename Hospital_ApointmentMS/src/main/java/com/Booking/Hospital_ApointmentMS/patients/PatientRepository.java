@@ -1,9 +1,7 @@
-package com.Booking.Hospital_ApointmentMS.patients;
+package com.Booking.Hospital_ApointmentMS.Patients;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
 @Repository
 public interface PatientRepository extends JpaRepository<Patient,Long> {
-    boolean existsByUsername(String username);
 }

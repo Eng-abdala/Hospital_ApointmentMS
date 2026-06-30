@@ -1,4 +1,4 @@
-package com.Booking.Hospital_ApointmentMS.patients;
+package com.Booking.Hospital_ApointmentMS.Patients;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

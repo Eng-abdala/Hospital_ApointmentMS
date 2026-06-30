@@ -1,7 +1,6 @@
-package com.Booking.Hospital_ApointmentMS.patients;
+package com.Booking.Hospital_ApointmentMS.Patients;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,6 +11,7 @@ public class PatientService {
     private final PatientRepository repository;
 
     public List<Patient> GetAllPatient(){
+
         return repository.findAll();
     }
 

@@ -1,4 +1,4 @@
-package com.Booking.Hospital_ApointmentMS.patients;
+package com.Booking.Hospital_ApointmentMS.Patients;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +19,7 @@ public class PatientController {
 
     @GetMapping
     public List<Patient> GetAllPatient() {
-        return service.GetAllPatient();
+        return service.getAllPatients();
     }
 
     @GetMapping("/{id}")

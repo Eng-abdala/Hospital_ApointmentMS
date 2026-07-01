@@ -1,4 +1,4 @@
-package com.Booking.Hospital_ApointmentMS.patients;
+package com.Booking.Hospital_ApointmentMS.Patients;
 
 import com.Booking.Hospital_ApointmentMS.Users.User;
 import jakarta.persistence.*;
@@ -20,13 +20,13 @@ public class Patient {
     private Long id;
 
     @OneToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "id")
     private User user;
 
-    @Column(name = "full_name", nullable = false)
+    @Column( nullable = false)
     private String fullName;
 
-    @Column(name = "date_of_birth")
+    @Column()
     private LocalDate dateOfBirth;
 
     @Column(name = "phone")

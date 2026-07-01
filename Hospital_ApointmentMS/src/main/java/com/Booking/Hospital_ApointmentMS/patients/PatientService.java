@@ -1,5 +1,7 @@
-package com.Booking.Hospital_ApointmentMS.patients;
+package com.Booking.Hospital_ApointmentMS.Patients;
 
+import com.Booking.Hospital_ApointmentMS.Patients.PatientRepository;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -7,6 +9,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Data
 public class PatientService {
 
     private final PatientRepository repository;
@@ -16,9 +19,6 @@ public class PatientService {
         return repository.findAll();
     }
 
-    public List<Patient> GetAllPatient() {
-        return getAllPatients();
-    }
 
     // Get Patient By Id
     public Patient getPatientById(Long id) {
@@ -37,7 +37,6 @@ public class PatientService {
         Patient existingPatient = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Patient not found"));
 
-        existingPatient.setUserId(patient.getUserId());
         existingPatient.setFullName(patient.getFullName());
         existingPatient.setDateOfBirth(patient.getDateOfBirth());
         existingPatient.setGender(patient.getGender());
